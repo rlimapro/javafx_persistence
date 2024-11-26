@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="465.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainViewController">
+    <children>
+        <GridPane layoutX="31.0" layoutY="42.0" prefHeight="30.0" prefWidth="417.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="99.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.0" minWidth="10.0" prefWidth="318.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Product name">
+                    <font>
+                        <Font name="Cantarell Bold" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="productNameField" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+        <GridPane layoutX="31.0" layoutY="90.0" prefHeight="30.0" prefWidth="417.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="99.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.0" minWidth="10.0" prefWidth="318.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label text="Product price">
+                    <font>
+                        <Font name="Cantarell Bold" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="productPriceField" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+        <Button fx:id="saveButton" onAction="#handleSaveAction" layoutX="401.0" layoutY="144.0" mnemonicParsing="false" text="Save" />
+        <TableView fx:id="productTable" layoutX="31.0" layoutY="205.0" prefHeight="200.0" prefWidth="417.0">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID" prefWidth="55.0" />
+                <TableColumn fx:id="nameColumn" text="Product name" prefWidth="181.0" />
+                <TableColumn fx:id="priceColumn" text="Product price" prefWidth="181.0" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
